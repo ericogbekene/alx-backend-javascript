@@ -1,11 +1,12 @@
 export default function getResponseFromAPI(){
 	return new Promise((resolve, reject) => {
-		if (true){
+		let checker = true;
+		if (checker){
 			resolve('Success');
 		}
 		else{
 			reject('Failed');
 		}
 	}
-	).then((message) => {console.log(message)}).catch(() => console.error(error) );
+	).then((message) => {console.log(message)}).catch((error) => console.error(error) );
 }
