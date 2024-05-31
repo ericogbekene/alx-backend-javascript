@@ -28,16 +28,25 @@ export default class HolbertonCourse {
 
   // setter for name
   set name(newName) {
-    this._name = newName;
+    if (typeof newName !== 'string') throw new Error('Name must be a string');
+    else {
+      this._name = newName;
+    }
   }
 
   // setter for name
   set length(newLength) {
-    this._length = newLength;
+    if (typeof newLength !== 'number') throw new Error('Length must be a number');
+    else {
+      this._length = newLength;
+    }
   }
 
   // setter for name
   set students(newStudents) {
-    this._name = newStudents;
+    if (!Array.isArray(newStudents)) throw new Error('Students must be an array');
+    else {
+      this._name = newStudents;
+    }
   }
 }
