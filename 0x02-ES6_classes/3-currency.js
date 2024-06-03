@@ -8,25 +8,25 @@ export default class Currency {
   }
 
   // getter and setter function
-  get code() {
+  get codeProperty() {
     return this._code;
   }
 
-  set code(newCode) {
+  set codeProperty(newCode) {
     if (typeof newCode !== 'string') throw new Error('Code must be a string');
     else {
       this._code = newCode;
     }
   }
 
-  get name() {
-    return this._code;
+  get nameProperty() {
+    return this._name;
   }
 
-  set name(newName) {
+  set nameProperty(newName) {
     if (typeof newCode !== 'string') throw new Error('Code must be a string');
     else {
-      this._code = newName;
+      this._name = newName;
     }
   }
 
